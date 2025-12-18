@@ -45,8 +45,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github repo](https://github.com/mrcordova/personal-finance-app)
-- Live Site URL: [personal-finance-app](https://personal-finance-app-1.onrender.com)
+- Solution URL: [Github repo](https://github.com/Abdullah-Sanomads/fintrack.git)
 
 ## My process
 
@@ -89,5 +88,4 @@ I learned how to create a full stack app and how to deploy it. I also learned ab
 
 ## Author
 
-- Website - [Noah C.](https://noahs.software)
-- Frontend Mentor - [@mrcordova](https://www.frontendmentor.io/profile/mrcordova)
+- Github Profile - [@Abdullah-Sanomads](https://github.com/Abdullah-Sanomads)
