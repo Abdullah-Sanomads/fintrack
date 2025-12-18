@@ -1,0 +1,117 @@
+<template id="recurring-template">
+  <div class="header-container public-sans-bold">
+    <h1>Recurring Bills</h1>
+  </div>
+
+  <div class="main-recurring">
+    <div class="recurring-info">
+      <div class="total-bills-container">
+        <div>
+          <img
+            src="./assets/images/icon-recurring-bills.svg"
+            alt="recurring bills" />
+        </div>
+        <div class="total-bills-info">
+          <p class="public-sans-regular">Total bills</p>
+          <p data-total-bill="384.98">$384.98</p>
+        </div>
+      </div>
+      <div class="recurring-summary">
+        <p>Summary</p>
+        <table>
+          <tbody data-summary></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="recurring-table-container">
+      <div class="search-container">
+        <div class="search-input public-sans-regular">
+          <input
+            type="text"
+            name="search-bills"
+            id="search-bills"
+            placeholder="Search bills" />
+          <img src="./assets/images/icon-search.svg" alt="search" />
+        </div>
+        <div class="dropdown public-sans-regular" aria-label="sort by">
+          <label for="sort-by-btn">Sort by</label>
+          <div>
+            <button id="sort-by-btn" data-budget-show="true">
+              Latest
+              <img
+                src="./assets/images/icon-caret-down.svg"
+                alt="drop down caret" />
+            </button>
+            <menu class="dropdown-content" data-parameter="sortByBills">
+              <li class="public-sans-bold">
+                <button>Latest</button>
+              </li>
+              <li>
+                <button>Oldest</button>
+              </li>
+              <li>
+                <button>A to Z</button>
+              </li>
+              <li>
+                <button>Z to A</button>
+              </li>
+              <li>
+                <button>Highest</button>
+              </li>
+              <li>
+                <button>Lowest</button>
+              </li>
+            </menu>
+          </div>
+          <button popovertarget="sortByDialog">
+            <img
+              data-dropdown=""
+              src="./assets/images/icon-sort-mobile.svg"
+              alt="sort by" />
+          </button>
+          <!-- <dialog > -->
+          <menu
+            id="sortByDialog"
+            popover
+            class="dropdown-content popover"
+            data-parameter="sortByBills">
+            <li class="public-sans-bold">
+              <button>Latest</button>
+            </li>
+            <li>
+              <button>Oldest</button>
+            </li>
+            <li>
+              <button>A to Z</button>
+            </li>
+            <li>
+              <button>Z to A</button>
+            </li>
+            <li>
+              <button>Highest</button>
+            </li>
+            <li>
+              <button>Lowest</button>
+            </li>
+          </menu>
+          <!-- </dialog> -->
+        </div>
+      </div>
+      <table class="responsive">
+        <colgroup>
+          <col span="2" />
+          <col span="2" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="public-sans-regular" scope="col">Bill Title</th>
+            <th></th>
+            <th class="public-sans-regular" scope="col">Due Date</th>
+            <th class="public-sans-regular" scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody data-vendors=""></tbody>
+      </table>
+    </div>
+  </div>
+</template>

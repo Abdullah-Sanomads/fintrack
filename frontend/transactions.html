@@ -1,0 +1,196 @@
+<template id="transactions-template">
+  <div class="header-container">
+    <h1 class="public-sans-bold">Transactions</h1>
+  </div>
+
+  <div class="main-transactions">
+    <div class="search-container">
+      <div class="search-input public-sans-regular">
+        <input
+          type="text"
+          name="search-transaction"
+          id="search-transaction"
+          placeholder="Search transactions" />
+        <img src="./assets/images/icon-search.svg" alt="search" />
+      </div>
+      <div class="dropdown public-sans-regular" aria-label="sort by">
+        <label for="sort-by-btn">Sort by</label>
+        <div>
+          <button id="sort-by-btn" data-budget-show="true">
+            Latest
+            <img
+              src="./assets/images/icon-caret-down.svg"
+              alt="drop down caret" />
+          </button>
+          <menu class="dropdown-content" data-parameter="sortBy">
+            <li class="public-sans-bold">
+              <button>Latest</button>
+            </li>
+            <li>
+              <button>Oldest</button>
+            </li>
+            <li>
+              <button>A to Z</button>
+            </li>
+            <li>
+              <button>Z to A</button>
+            </li>
+            <li>
+              <button>Highest</button>
+            </li>
+            <li>
+              <button>Lowest</button>
+            </li>
+          </menu>
+        </div>
+        <button popovertarget="sortByDialog">
+          <img
+            data-dropdown=""
+            src="./assets/images/icon-sort-mobile.svg"
+            alt="sort by" />
+        </button>
+        <menu
+          id="sortByDialog"
+          popover
+          class="dropdown-content popover"
+          data-parameter="sortBy">
+          <li class="public-sans-bold">
+            <button>Latest</button>
+          </li>
+          <li>
+            <button>Oldest</button>
+          </li>
+          <li>
+            <button>A to Z</button>
+          </li>
+          <li>
+            <button>Z to A</button>
+          </li>
+          <li>
+            <button>Highest</button>
+          </li>
+          <li>
+            <button>Lowest</button>
+          </li>
+        </menu>
+      </div>
+      <div class="dropdown public-sans-regular" aria-label="Category">
+        <label for="category-btn">Category</label>
+        <div>
+          <button id="category-btn" data-budget-show="true">
+            All Transactions
+            <img
+              src="./assets/images/icon-caret-down.svg"
+              alt="drop down caret" />
+          </button>
+          <menu class="dropdown-content" data-parameter="category">
+            <li class="public-sans-bold">
+              <button>All Transactions</button>
+            </li>
+            <li>
+              <button>Entertainment</button>
+            </li>
+            <li>
+              <button>Bills</button>
+            </li>
+            <li>
+              <button>Groceries</button>
+            </li>
+            <li>
+              <button>Dining Out</button>
+            </li>
+            <li>
+              <button>Transportaion</button>
+            </li>
+            <li>
+              <button>Personal Care</button>
+            </li>
+            <li>
+              <button>Education</button>
+            </li>
+            <li>
+              <button>Lifestyle</button>
+            </li>
+            <li>
+              <button>Shopping</button>
+            </li>
+            <li>
+              <button>General</button>
+            </li>
+          </menu>
+        </div>
+        <button popovertarget="category-popover">
+          <img
+            data-dropdown
+            src="./assets/images/icon-filter-mobile.svg"
+            alt="Category" />
+        </button>
+        <menu
+          id="category-popover"
+          popover
+          class="dropdown-content popover"
+          data-parameter="category">
+          <li class="public-sans-bold">
+            <button>All Transactions</button>
+          </li>
+          <li>
+            <button>Entertainment</button>
+          </li>
+          <li>
+            <button>Bills</button>
+          </li>
+          <li>
+            <button>Groceries</button>
+          </li>
+          <li>
+            <button>Dining Out</button>
+          </li>
+          <li>
+            <button>Transportaion</button>
+          </li>
+          <li>
+            <button>Personal Care</button>
+          </li>
+          <li>
+            <button>Education</button>
+          </li>
+          <li>
+            <button>Lifestyle</button>
+          </li>
+          <li>
+            <button>Shopping</button>
+          </li>
+          <li>
+            <button>General</button>
+          </li>
+        </menu>
+      </div>
+    </div>
+
+    <table class="public-sans-regular">
+      <colgroup>
+        <col span="2" />
+        <col span="2" />
+      </colgroup>
+      <thead>
+        <th class="public-sans-regular" scope="col">Recipient/Sender</th>
+        <th class="public-sans-regular" scope="col">Category</th>
+        <th class="public-sans-regular" scope="col">Transaction Date</th>
+        <th class="public-sans-regular" scope="col">Amount</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <nav aria-label="pagination" class="page-controls">
+      <button data-nav="" data-move="-1" class="page-btns public-sans-regular">
+        <img src="./assets/images/icon-caret-left.svg" alt="left caret" />
+        <span>Prev</span>
+      </button>
+      <div class="page-number-btns"></div>
+      <button data-nav="" data-move="1" class="page-btns public-sans-regular">
+        <span>Next</span>
+        <img src="./assets/images/icon-caret-right.svg" alt="right caret" />
+      </button>
+    </nav>
+  </div>
+</template>
